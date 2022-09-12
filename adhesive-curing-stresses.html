@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Capturing the effect of CTE mismatch in heat cured adhesive bonded multi-material joints. Evaluation of magnitude and the nature of residual stresses and structural distortions.">
+        <meta name="author" content="Akshat Agha, Ph.D.">
+    
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="Adhesive bonded multi-material joints" /> <!-- website name -->
+        <meta property="og:site" content="akshatagha.com/adhesive-curing-stresses.html" /> <!-- website link -->
+        <meta property="og:title" content="Residual stresses and distortions in adhesive Bonded multi-material joints"/> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="Characterization and modeling of curing induced residual stresses in heat cured adhesive bonded multi-material joints. Capturing the CTE mismatch effects in adhesive bonded joints" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="https://i.ibb.co/BgYNknF/project-1.png" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="https://www.akshatagha.com/adhesive-curing-stresses.html" /> <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+    
+        <!-- Webpage Title -->
+        <title>Characterization and modeling of curing induced residual stresses in heat cured adhesive bonded multi-material joints | Dr. Akshat Agha </title>    
+        <!-- Styles -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/fontawesome-all.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    
+        <!-- Favicon  -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            
+            <!-- Image Logo 
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <a class="navbar-brand logo-text page-scroll" href="index.html">AKSHAT AGHA, Ph.D.</a>
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item page-scroll" href="projects.html">Projects</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="pubs.html">Research Publications</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="conference.html">Conference Presentations</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="talks.html">Invited Talks</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="awards.html">Awards</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="voluntaryservice.html">Voluntary Service</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="media.html">Media Coverage</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                <span class="nav-item social-icons">
+                    <span class="fa-stack">
+                        <a href="https://www.linkedin.com/in/akshatagha/">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://scholar.google.com/citations?user=7I3rv_MAAAAJ&hl=en&oi=ao">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-google fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1></h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h2 class="mb-3">Research Motivation</h2>
+                    <p>In recent times, the automotive industry has seen a huge shift from steel-intensive body-in-white (BIW) to highly complex multi-material lightweight structures making use of modern materials. The introduction and mixing of new materials (like advanced high strength steels, aluminum alloys, magnesium alloys, and fiber-reinforced composites) to create a single component has led to the development of new manufacturing processes and joining techniques, as the conventionally popular joining techniques like spot welding fail to perform for multi-material joints. In this scenario, adhesive bonding is a viable method for joining dissimilar materials; it enables high-performance and flexible joints while eliminating the weight and cost of mechanical fasteners. However, adhesive bonding has its limitations. Automotive-grade structural adhesives are heat-cured epoxy-based thermosets. The heat curing process poses a critical problem pertaining to the differences in the coefficient of thermal expansion (CTE) of the joined materials; the mismatch of which has significant implications on the integrity and response of the BIW to external loading (mainly thermal). </p>
+                    <p>One of the main challenges in the joining of multi-material components is the assessment of the nature and magnitude of the residual stresses developing in the adhesive bond during the heat curing manufacturing process. Numerical modeling of these residual stresses can provide insights for making informed decisions related to (i) material substrate properties; (ii) adhesive properties i.e. low, medium, or high stiffness; (iii) bondline geometry i.e. bondline width and bead thickness; (iv) curing cycle characteristics; and (v) fixation design i.e. type, spacing, the number of joints and much more. </p>
+                    <p>There is a need for reliable experimental techqniques and robust mathematical models to comprehensively capture the effects of CTE mismatch in adhesive bonded joints. </p>
+                    <img class="img-fluid mb-5" src="images/project-1_adhesives.png" alt="alternative">
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+
+        <!-- Basic -->
+        <div class="ex-basic-1 pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <h2 class="mb-3">Research Outline</h2>
+                        <p class="mb-4">This work presents a suite of characterization methods and a cure history-dependent viscoelastic-plastic material description for the modeling of adhesive bonded joints. The main highlight of the work is the multi-physics modeling package consisting of a curing kinetics model, a cure-dependent viscoelastic model, and a temperature, strain-rate dependent plastic model formulation which can be coded in any finite element solver. The modeling approach can predict the residual stresses in the adhesive bond due to the accumulated viscoelastic as well as plastic strains occurring during the heat curing process. This study was performed at Clemson University (CU-ICAR) and was sponsored by Henkel Corporation North America.</p>
+                        <p>The research task was divided into three groups of activities, published in the International Journal of Adhesion and Adhesives in a series of research articles and my Doctoral Dissertation at Clemson University. </p>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of ex-basic-1 -->
+        <!-- end of basic -->
+
+    <!-- Cards -->
+    <div class="ex-cards-1 pt-3 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <!-- Card -->
+                    <div class="card">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <span class="fa-stack">
+                                    <span class="fas fa-circle fa-stack-2x"></span>
+                                    <span class="fa-stack-1x">1</span>
+                                </span>
+                                <div class="media-body">
+                                    <h5>Advanced Characterization Techniques</h5>
+                                    <p>Experimental Methods to capture the effect of CTE mismatch in the material substrates on the adhesive bonded joints</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <span class="fa-stack">
+                                    <span class="fas fa-circle fa-stack-2x"></span>
+                                    <span class="fa-stack-1x">2</span>
+                                </span>
+                                <div class="media-body">
+                                    <h5>Mathematical Modeling Package</h5>
+                                    <p>Development and calibration of cure-history dependent viscoelastic-plastic material description for adhesives</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <ul class="list-unstyled">
+                            <li class="media">
+                                <span class="fa-stack">
+                                    <span class="fas fa-circle fa-stack-2x"></span>
+                                    <span class="fa-stack-1x">3</span>
+                                </span>
+                                <div class="media-body">
+                                    <h5>User-defined material subroutine (UMAT) for adhesives</h5>
+                                    <p>Development of a UMAT in LS-DYNA for the adhesive and its experimental validation at coupon level and component level.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->   
+            </div> <!-- end of row -->   
+        </div> <!-- end of container -->   
+    </div> <!-- end of ex-cards-1 -->
+    <!-- end of cards -->
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-3 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    
+                    <div class="text-box mb-5">
+                        <h3>Publication 1: Experimental methods to capture curing induced effects in adhesive bonded joints</h3>
+                        <div class="media-body"><strong>Agha, Akshat</strong>, and Fadi Abu-Farha. "Experimental methods to capture curing induced effects in adhesive bonded joints." International Journal of Adhesion and Adhesives 104 (2021): 102735. <a style="color:red;" href="https://www.sciencedirect.com/science/article/abs/pii/S0143749620301986" target="_blank"><i>doi</i> <a> | </a> <a style="color:blue;" href="pdfs/2021_IJAAD_Agha_Experimental methods to capture curing induced effects in adhesive bonded joints.pdf" target="_blank" download><i>Download Full Article</i></a></div>
+                        <p> </p>
+                        <p><strong>Article Highlights </strong></p>
+                        <ul class="list-unstyled li-space-lg mb-5">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Innovative experiment to characterize the thermal effects of the heat curing process on a multi-material single lap shear joint using digital image correlation and advanced sensors. This test can be used for adhesive screening and experimental validation of FE models. </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Compares the performance of residual stress-induced joints against stress-free joints under tension loading at different strain rates (0.005/s, 0.5/s and 50/s)</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">DIC generated videos of the adhesive heat curing process providing insights into the phenomenon occurring during the thermal movement of substrates.</div>
+                            </li>
+                        </ul>
+                        <a href="https://www.youtube.com/watch?v=fk_8PadePDc" target = "blank"><img src="images/project-1_adhesives-YT.png" ></a>
+                    </div> <!-- end of text-box -->    
+                    <div class="text-box mb-5">
+                        <h3>Publication 2: Viscoelastic model to capture residual stresses in heat cured dissimilar adhesive bonded joints</h3>
+                        <div class="media-body"><strong>Agha, Akshat</strong>, and Fadi Abu-Farha. "Viscoelastic model to capture residual stresses in heat cured dissimilar adhesive bonded joints." International Journal of Adhesion and Adhesives 107 (2021): 102844. <a style="color:red;" href="https://www.sciencedirect.com/science/article/abs/pii/S0143749621000427" target="_blank"><i>doi</i> <a> | </a> <a style="color:blue;" href="pdfs/2021_IJAAD_Agha_Viscoelastic model to capture residual stresses in heat cured dissimilar adhesive bonded joints.pdf" target="_blank" download><i>Download Full Article</i></a></div>
+                        <p> </p>
+                        <p><strong>Article Highlights </strong></p>
+                        <ul class="list-unstyled li-space-lg mb-5">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Curing Kinetics Model to calculate the degree of cure for Henkel Teroson EP5089 using DSC results </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Viscoelastic model to capture the cure level and temperature dependent viscoelastic properties using DMA results</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Detailed calibration procedure and FE implementation of mathematical models in LS-DYNA</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Experimental validation of FE simulations using multi-material lap shear joints</div>
+                            </li>
+                        </ul>
+                        <img src="images/project-1_adhesives-FE.png" alt="FE Simulation Lap Shear Joint" >
+                    </div> <!-- end of text-box -->    
+                    <div class="text-box mb-5">
+                        <h3>Publication 3: Numerical Implementation and Validation of a Viscoelastic-Plastic Material Model for Predicting Curing Induced Residual Stresses in Adhesive Bonded Joints</h3>
+                        <div class="media-body"><strong>Agha, Akshat</strong>, and Fadi Abu-Farha. "Numerical Implementation and Validation of a Viscoelastic-Plastic Material Model for Predicting Curing Induced Residual Stresses in Adhesive Bonded Joints." International Journal of Adhesion and Adhesives (2022): 103195. <a style="color:red;" href="https://www.sciencedirect.com/science/article/abs/pii/S0143749622001129"target="_blank"><i>doi</i></a><a> | </a> <a style="color:blue;" href="pdfs/2022_IJAAD_Agha_Numerical Implementation and Validation of a Viscoelastic-Plastic Material Model for Predicting Curing Induced Residual Stresses in Adhesive Bonded Joints.pdf" target="_blank" download><i>Download Full Article</i></a></div>
+                        <p> </p>
+                        <p><strong>Article Highlights </strong></p>
+                        <ul class="list-unstyled li-space-lg mb-5">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Determination of temperature and strain rate dependent viscoelastic-plastic nature of adhesive using high-temperature uniaxial tension tests</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Cure history dependent viscoelastic-plastic material model and its calibration for Henkel Teroson EP5089 </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Mathematical formulation for coding the material models in any FE solver</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">UMAT coding for LS-DYNA in fortran (code available upon request)</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">FE simulations and experimental validation at component level on a subsized automotive roof structure</div>
+                            </li>
+                        </ul>
+                        <img src="images/project-1_adhesives-umat.png" alt="UMAT Adhesive" >
+                    </div> <!-- end of text-box -->    
+                   
+                    <a class="btn-solid-reg mb-5" href="index.html">Back</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+
+
+    <!-- Footer -->
+    <div class="footer bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="social-container">
+                        <span class="fa-stack">
+                            <a href="https://www.linkedin.com/in/akshatagha/" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://scholar.google.com/citations?user=7I3rv_MAAAAJ&hl=en&oi=ao" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-google fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.webofscience.com/wos/author/record/2165827" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-product-hunt fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.researchgate.net/profile/Akshat-Agha" target="_blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-researchgate fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of social-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a class="no-line" href="">Akshat Agha</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->    
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+
+
+    
+    	
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
